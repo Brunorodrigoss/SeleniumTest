@@ -19,7 +19,7 @@ public class NavegadorPage {
 	
 	public void preencheDadosGmail() {
 		preencheNomeSobrenome("Nome", "Sobrenome");
-		preencheUsuarioGmail("emailcr70qwe2");
+		preencheUsuarioGmail("emailcr70weewqwe2");
 		preencheSenha("senha123@@");
 		preecheConfirmacaoSenha("senha123@@");
 		preencheDia("07");
@@ -93,13 +93,13 @@ public class NavegadorPage {
 		while (driver.findElement(By.className("tos-scroll-button-icon")).isDisplayed()) {
 			driver.findElement(By.xpath("//*[@id=\"tos-scroll-button\"]/div/img")).click();
 		}
-		
-		driver.findElement(By.id("iagreebutton")).click();
-		
+		driver.findElement(By.xpath("//*[@id=\"iagreebutton\"]")).click();
+//		driver.findElement(By.id("iagreebutton")).click();
+			
 	}
 
 	public void prosseguirParaGmail() {
-		selecionaProximaEtapa();
+		driver.findElement(By.id("iagreebutton")).click();
 		
 	}
 
